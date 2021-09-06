@@ -6,7 +6,7 @@ Members only page made with Node.js, Express, and MongoDB.
 After cloning the repo, run:
 
 ```elm
-cd inventory-application
+cd members-only
 npm install
 npm run devstart
 ```
