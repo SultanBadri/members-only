@@ -1,0 +1,45 @@
+nav {
+  background: white;
+  padding: 1.5rem;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+li {
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 6px 10px;
+  transition: all 0.3s;
+  border-radius: 4px;
+  background-color: white;
+}
+
+a:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.login a {
+  background-color: #00b7ff;
+  color: white;
+  transition: all 0.3s;
+}
+
+.login a:hover {
+  background-color: #0299d4;
+}

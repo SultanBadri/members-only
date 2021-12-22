@@ -8,7 +8,7 @@ const {
   handleSignUp,
   handleLogin,
 } = require("./../controllers/authController");
-// const {} = require("./../controllers/messageController");
+const { postMessage } = require("./../controllers/messageController");
 
 // GET home page
 router.get("/", getIndexView);
@@ -27,6 +27,7 @@ router.get("/logout", handleLogout);
 // GET become member page
 
 // GET post message page
+router.get("/post-message", postMessage);
 
 // GET become admin page
 

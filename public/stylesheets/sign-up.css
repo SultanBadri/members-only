@@ -1,0 +1,24 @@
+.center-content {
+  background-color: #1e2d31;
+  border-radius: 8px;
+  padding: 1rem 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.sign-up-button {
+  background-color: #00b7ff;
+  margin: 10px 0;
+  padding: 6px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.sign-up-button:hover {
+  background-color: #0299d4;
+}
