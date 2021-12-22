@@ -1,19 +1,23 @@
 require("dotenv").config();
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const session = require("express-session");
+const passport = require("passport");
+const bcrypt = require("bcryptjs");
+const LocalStrategy = require("passport-local").Strategy;
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 
-var indexRouter = require("./routes/index");
+const indexRouter = require("./routes/index");
 
-var app = express();
+const app = express();
 
 // Set up mongoose connection
-var mongoose = require("mongoose");
-var mongoDB = process.env.MONGODB_URL_STRING;
+const mongoose = require("mongoose");
+const mongoDB = process.env.MONGODB_URL_STRING;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // view engine setup
