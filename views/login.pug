@@ -2,4 +2,11 @@ extends layout
 
 block content
   title= "Log in | Members Only"
-  h1= "Log in"
+  div.center-content
+    h1= "Log in"
+    form.test(action="/login" method="POST")
+    label(for="username") Username
+    input(name="username" placeholder="Username" type="text")
+    label(for="password") Password
+    input(name="password" placeholder="Password" type="password")
+    button.sign-up-button Log in

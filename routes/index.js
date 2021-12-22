@@ -1,26 +1,27 @@
 const express = require("express");
 const router = express.Router();
 const {
-  setIndexView,
+  getIndexView,
   getSignUpForm,
   getLoginForm,
   handleLogout,
+  handleSignUp,
+  handleLogin,
 } = require("./../controllers/authController");
 // const {} = require("./../controllers/messageController");
 
-// GET home page.
-router.get("/", setIndexView);
+// GET home page
+router.get("/", getIndexView);
 
-// GET sign up page
+// GET and POST sign up form
 router.get("/sign-up", getSignUpForm);
+router.post("/sign-up", handleSignUp);
 
-// POST sign up user
-router.post(/"sign-up", handleSignUp);
-
-// GET login page
+// GET and POST login form
 router.get("/login", getLoginForm);
+router.post("/login", handleLogin);
 
-// GET logout page
+// Handle logout
 router.get("/logout", handleLogout);
 
 // GET become member page
