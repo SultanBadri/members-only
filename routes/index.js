@@ -4,6 +4,7 @@ const {
   getIndexView,
   getSignUpForm,
   getLoginForm,
+  getLoginFailForm,
   handleLogout,
   handleSignUp,
   handleLogin,
@@ -14,12 +15,13 @@ const { postMessage } = require("./../controllers/messageController");
 router.get("/", getIndexView);
 
 // GET and POST sign up form
-router.get("/sign-up", getSignUpForm);
-router.post("/sign-up", handleSignUp);
+router.get("/sign-up", getSignUpForm).post("/sign-up", handleSignUp);
 
 // GET and POST login form
-router.get("/login", getLoginForm);
-router.post("/login", handleLogin);
+router
+  .get("/login", getLoginForm)
+  .get("/login-fail", getLoginFailForm)
+  .post("/login", handleLogin);
 
 // Handle logout
 router.get("/logout", handleLogout);

@@ -25,9 +25,11 @@ exports.handleSignUp = async (req, res, next) => {
 
 exports.getLoginForm = (req, res) => res.render("login");
 
+exports.getLoginFailForm = (req, res) => res.render("login-fail");
+
 exports.handleLogin = passport.authenticate("local", {
   successRedirect: "/",
-  failureRedirect: "/login",
+  failureRedirect: "/login-fail",
 });
 
 exports.handleLogout = (req, res) => {

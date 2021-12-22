@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  title= "Log in | Members Only"
+  div.center-content
+    h1= "Log in"
+    form.test(action="/login" method="POST")
+      label(for="username") Username
+      br
+      input(name="username" placeholder="Username" type="text")
+      br
+      label(for="password") Password
+      br
+      input(name="password" placeholder="Password" type="password")
+      br
+      button.sign-up-button Log in
+    
+    div
+      p= "Incorrect username or password"
