@@ -9,10 +9,13 @@ a {
 }
 
 /* index.pug */
-.hero {
+nav {
 }
 
-.hero-links {
+.nav-content {
+}
+
+.links {
 }
 
 /* sign-up.pug */

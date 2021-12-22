@@ -2,9 +2,11 @@ extends layout
 
 block content
   title= "Members Only"
-  div.hero
-    h1 Add any message you want!
-    div.hero-links
-      a(href="/sign-up") Sign up 
-      a(href="/login") Log in
-  p Sign up today! Don't miss out on the fun!
+  nav
+    div.nav-content
+      h2= "Members Only"
+      div.links
+        a(href="/post-message") Post
+        a(href="/sign-up") Sign up 
+        a(href="/login") Log in
+

@@ -8,22 +8,25 @@ const {
 } = require("./../controllers/authController");
 // const {} = require("./../controllers/messageController");
 
-/* GET home page. */
+// GET home page.
 router.get("/", setIndexView);
 
-/* GET sign up page */
+// GET sign up page
 router.get("/sign-up", getSignUpForm);
 
-/* GET login page */
+// POST sign up user
+router.post(/"sign-up", handleSignUp);
+
+// GET login page
 router.get("/login", getLoginForm);
 
-/* GET logout page */
+// GET logout page
 router.get("/logout", handleLogout);
 
-/* GET become member page */
+// GET become member page
 
-/* GET post message page */
+// GET post message page
 
-/* GET become admin page */
+// GET become admin page
 
 module.exports = router;
