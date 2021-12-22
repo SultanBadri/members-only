@@ -12,6 +12,8 @@ exports.handleSignUp = async (req, res, next) => {
     const user = new User({
       username: username,
       password: hashedPassword,
+      isMember: true,
+      isAdmin: false,
     }).save((err) => {
       if (err) {
         return next(err);

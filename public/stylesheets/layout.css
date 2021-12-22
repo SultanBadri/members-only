@@ -50,12 +50,12 @@ li a:hover {
   background-color: rgb(207, 207, 207);
 }
 
-.login a {
+.login-logout a {
   background-color: var(--blue);
   color: white;
   transition: all 0.3s;
 }
 
-.login a:hover {
+.login-logout a:hover {
   background-color: var(--darker-blue);
 }

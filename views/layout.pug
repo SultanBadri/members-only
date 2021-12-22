@@ -13,11 +13,15 @@ html
       a.header(href='/') Members Only
       div.links
         ul
-          li
-            a(href="/post-message") Post message
-          li
-            a(href="/sign-up") Sign up
-          li.login
-            a(href="/login") Log in
+          if (!locals.currentUser)
+            li
+              a(href="/sign-up") Sign up
+            li.login-logout
+              a(href="/login") Log in
+          else
+            li
+              a(href="/post-message") Post message
+            li.login-logout
+              a(href="/logout") Log out
   block content
     
