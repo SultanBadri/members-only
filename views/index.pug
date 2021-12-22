@@ -2,4 +2,8 @@ extends layout
 
 block content
   title= "Members Only"
-
+  if locals.currentUser
+    if locals.currentUser.isMember
+      h1= "You are logged in!"
+    else
+      h1= "You are not logged in!"
