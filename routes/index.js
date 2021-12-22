@@ -1,5 +1,7 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+// const {} = require("./../controllers/authController");
+// const {} = require("./../controllers/messageController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
