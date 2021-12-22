@@ -1,27 +1,24 @@
 const express = require("express");
 const router = express.Router();
-// const {} = require("./../controllers/authController");
+const {
+  setIndexView,
+  getSignUpForm,
+  getLoginForm,
+  handleLogout,
+} = require("./../controllers/authController");
 // const {} = require("./../controllers/messageController");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Members Only" });
-});
+router.get("/", setIndexView);
 
 /* GET sign up page */
-router.get("/sign-up", function (req, res, next) {
-  res.render("sign-up", { title: "Sign up" });
-});
+router.get("/sign-up", getSignUpForm);
 
-/* GET log in page */
-router.get("/log-in", function (req, res, next) {
-  res.render("log-in", { title: "Log in" });
-});
+/* GET login page */
+router.get("/login", getLoginForm);
 
-/* GET log out page */
-router.get("/log-out", function (req, res, next) {
-  res.render("log-out", { title: "Log out" });
-});
+/* GET logout page */
+router.get("/logout", handleLogout);
 
 /* GET become member page */
 
