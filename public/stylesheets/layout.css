@@ -1,3 +1,8 @@
+:root {
+  --blue: #00b7ff;
+  --darker-blue: #0299d4;
+}
+
 nav {
   background: white;
   padding: 1.5rem;
@@ -11,6 +16,17 @@ nav {
   padding: 0 2rem;
 }
 
+.header {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--blue);
+  transition: all 0.2s;
+}
+
+.header:hover {
+  color: var(--darker-blue);
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -21,7 +37,7 @@ li {
   padding: 0 1rem;
 }
 
-a {
+li a {
   text-decoration: none;
   color: black;
   padding: 6px 10px;
@@ -30,16 +46,16 @@ a {
   background-color: white;
 }
 
-a:hover {
+li a:hover {
   background-color: rgb(207, 207, 207);
 }
 
 .login a {
-  background-color: #00b7ff;
+  background-color: var(--blue);
   color: white;
   transition: all 0.3s;
 }
 
 .login a:hover {
-  background-color: #0299d4;
+  background-color: var(--darker-blue);
 }
