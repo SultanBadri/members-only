@@ -4,7 +4,7 @@ block content
   title= "Members Only"
   div.content-wrapper
     if (!user)
-      h1= "Log in to post 😎" 
+      h1= "Log in to post!" 
     else
       if (user && user.isAdmin)
         h1 Hi, #{user.username} 👑

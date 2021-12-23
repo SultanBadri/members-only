@@ -2,17 +2,18 @@ extends layout
 
 block content
   title= "Log in | Members Only"
-  div.center-content
-    h1= "Log in"
-    p= "Don't have an account?" 
-      a(href="/sign-up") Sign up
-    form.test(action="/login" method="POST")
-      label(for="username" required) Username
-      br
-      input(name="username" placeholder="Username" type="text" required)
-      br
-      label(for="password") Password
-      br
-      input(name="password" placeholder="Password" type="password" required)
-      br
-      button.submit-button Log in
+  div.wrapper
+    div.center-content
+      h1= "Log in"
+      p= "Don't have an account?" 
+        a(href="/sign-up") Sign up
+      form.test(action="/login" method="POST")
+        label(for="username" required) Username
+        br
+        input(name="username" placeholder="Username" type="text" required)
+        br
+        label(for="password") Password
+        br
+        input(name="password" placeholder="Password" type="password" required)
+        br
+        button.submit-button Log in

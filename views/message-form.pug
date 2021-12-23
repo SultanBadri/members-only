@@ -2,15 +2,16 @@ extends layout
 
 block content
   title= "Post Message | Members Only"
-  div.center-content
-    h1= "Create new post"
-    form(action="" method="POST")
-      label(for="title") Title
-      br
-      input(name="title" placeholder="Title" type="text" required)
-      br
-      label(for="content") Content
-      br
-      textarea(name="content" placeholder="Content" required)
-      br
-      button.submit-button Post
+  div.wrapper
+    div.center-content
+      h1= "Post message"
+      form(action="" method="POST")
+        label(for="title") Title
+        br
+        input(name="title" placeholder="Title" type="text" required)
+        br
+        label(for="content") Content
+        br
+        textarea(name="content" placeholder="Content" required)
+        br
+        button.submit-button Post

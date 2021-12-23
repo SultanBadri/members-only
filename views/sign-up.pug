@@ -3,24 +3,25 @@ extends layout
 block content
   title= "Sign up | Members Only"
   - var refillUsername = username ? value=`${username}` : ""
-  div.center-content
-    h1= "Sign up"
-    p= "Already registered?" 
-      a(href="/login") Log in
-    form(action="" method="POST")
-      label(for="username") Username
-      br
-      input(name="username" placeholder="Username" value=`${refillUsername}` type="text" required)
-      br
-      label(for="password") Password
-      br
-      input(name="password" placeholder="Password" type="password" required)
-      br
-      label(for="confirm") Confirm Password
-      br
-      input(name="confirm" placeholder="Confirm Password" type="password" required)
-      br
-      button.submit-button Sign Up
+  div.wrapper
+    div.center-content
+      h1= "Sign up"
+      p= "Already registered?" 
+        a(href="/login") Log in
+      form(action="" method="POST")
+        label(for="username") Username
+        br
+        input(name="username" placeholder="Username" value=`${refillUsername}` type="text" required)
+        br
+        label(for="password") Password
+        br
+        input(name="password" placeholder="Password" type="password" required)
+        br
+        label(for="confirm") Confirm Password
+        br
+        input(name="confirm" placeholder="Confirm Password" type="password" required)
+        br
+        button.submit-button Sign Up
     
-    if error
-      p= error
+      if error
+        p= error

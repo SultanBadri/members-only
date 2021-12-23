@@ -6,15 +6,21 @@
   margin: 3rem 1rem;
 }
 
+.content-wrapper h1 {
+  color: var(--red);
+  padding: 1rem 0 2rem 0;
+}
+
 .message {
   width: 70%;
-  background-color: #333;
-  border-radius: 8px;
+  background-color: var(--black);
+  border-radius: 14px;
   padding: 2rem;
   margin: 1rem 0;
-  transition: all 0.5s;
+  transition: all 0.4s;
+  color: white;
 }
 
 .message:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
