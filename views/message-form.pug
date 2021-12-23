@@ -1,16 +1,16 @@
 extends layout
 
 block content
-  title= "Members Only | Post Message"
+  title= "Post Message | Members Only"
   div.center-content
     h1= "Create new post"
     form(action="" method="POST")
       label(for="title") Title
       br
-      input(name="title" placeholder="Title" type="text")
+      input(name="title" placeholder="Title" type="text" required)
       br
       label(for="content") Content
       br
-      input(name="content" placeholder="Content" type="text")
+      input(name="content" placeholder="Content" type="text" required)
       br
-      button.submit-button Submit
+      button.submit-button Post
