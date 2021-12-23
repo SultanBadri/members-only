@@ -2,7 +2,14 @@ extends layout
 
 block content
   title= "Members Only"
-  if (!locals.currentUser)
+  if (!user)
     h1= "You are not logged in!"
   else
     h1= "You are logged in!"
+
+  div.content-wrapper
+    for message in messages
+      div.message
+        h2 #{message.title}
+        p #{message.content}
+        p #{message.date.toLocaleString()}

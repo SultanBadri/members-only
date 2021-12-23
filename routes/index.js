@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { getIndexView } = require("./../controllers/indexController");
 const {
-  getIndexView,
   getSignUpForm,
   getLoginForm,
   getLoginFailForm,

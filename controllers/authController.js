@@ -2,8 +2,6 @@ const User = require("../models/userModel");
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
 
-exports.getIndexView = (req, res) => res.render("index");
-
 exports.getSignUpForm = (req, res) => res.render("sign-up");
 
 exports.handleSignUp = async (req, res, next) => {
@@ -18,7 +16,7 @@ exports.handleSignUp = async (req, res, next) => {
       if (err) {
         return next(err);
       }
-      res.redirect("/");
+      res.redirect("/login");
     });
   });
 };

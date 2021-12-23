@@ -16,20 +16,3 @@ exports.postMessage = (req, res, next) => {
     res.redirect("/");
   });
 };
-
-// exports.handleSignUp = async (req, res, next) => {
-//   const { username, password } = req.body;
-//   bcrypt.hash(password, 10, (err, hashedPassword) => {
-//     const user = new User({
-//       username: username,
-//       password: hashedPassword,
-//       isMember: true,
-//       isAdmin: false,
-//     }).save((err) => {
-//       if (err) {
-//         return next(err);
-//       }
-//       res.redirect("/");
-//     });
-//   });
-// };
