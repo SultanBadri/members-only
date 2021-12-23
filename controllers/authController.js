@@ -5,20 +5,27 @@ const bcrypt = require("bcryptjs");
 exports.getSignUpForm = (req, res) => res.render("sign-up");
 
 exports.postSignUp = async (req, res, next) => {
-  const { username, password } = req.body;
-  bcrypt.hash(password, 10, (err, hashedPassword) => {
-    const user = new User({
+  const { username, password, confirm } = req.body;
+  if (confirm !== password) {
+    res.render("sign-up", {
       username: username,
-      password: hashedPassword,
-      isMember: true,
-      isAdmin: false,
-    }).save((err) => {
-      if (err) {
-        return next(err);
-      }
-      res.redirect("/login");
+      error: "Passwords must match!",
     });
-  });
+  } else {
+    bcrypt.hash(password, 10, (err, hashedPassword) => {
+      const user = new User({
+        username: username,
+        password: hashedPassword,
+        isMember: true,
+        isAdmin: false,
+      }).save((err) => {
+        if (err) {
+          return next(err);
+        }
+        res.redirect("/login");
+      });
+    });
+  }
 };
 
 exports.getLoginForm = (req, res) => res.render("login");
