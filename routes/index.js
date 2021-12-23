@@ -30,7 +30,7 @@ router
 router.get("/logout", handleLogout);
 
 // GET and POST message page
-router.get("/message-form", getMessage).get("/message-form", postMessage);
+router.get("/message-form", getMessage).post("/message-form", postMessage);
 
 // GET become admin page
 
