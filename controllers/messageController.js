@@ -16,3 +16,13 @@ exports.postMessage = (req, res, next) => {
     res.redirect("/");
   });
 };
+
+exports.deleteMessage = async (req, res, next) => {
+  const { messageId } = req.body;
+  try {
+    await Message.findByIdAndDelete(messageId);
+    res.redirect("/");
+  } catch (err) {
+    return next(err);
+  }
+};

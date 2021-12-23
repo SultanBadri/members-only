@@ -12,6 +12,7 @@ const {
 const {
   getMessage,
   postMessage,
+  deleteMessage,
 } = require("./../controllers/messageController");
 const {
   getAdminForm,
@@ -36,7 +37,10 @@ router.get("/logout", handleLogout);
 // GET and POST message page
 router.get("/message-form", getMessage).post("/message-form", postMessage);
 
-// GET become admin page
+// GET and POST admin page
 router.get("/admin-form", getAdminForm).post("/admin-form", postAdminForm);
+
+// POST delete message
+router.post("/", deleteMessage);
 
 module.exports = router;
