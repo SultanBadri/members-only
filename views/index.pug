@@ -4,9 +4,12 @@ block content
   title= "Members Only"
   div.content-wrapper
     if (!user)
-      h1= "You are not logged in!" 
+      h1= "Log in to post 😎" 
     else
-      h1= "You are logged in!"
+      if (user && user.isAdmin)
+        h1 Hi, #{user.username} 👑
+      else
+        h1 Hi, #{user.username}
 
     for message in messages
       div.message
