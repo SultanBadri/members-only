@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  title= "Members Only | Post Message"
+  div.center-content
+    h1= "Create new post"
+    form(action="" method="POST")
+      label(for="title") Title
+      br
+      input(name="title" placeholder="Title" type="text")
+      br
+      label(for="content") Content
+      br
+      input(name="content" placeholder="Content" type="text")
+      br
+      button.submit-button Submit

@@ -1,12 +1,14 @@
 doctype html
 html
   head
-    title= title
+    title= "Members Only"
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/index.css')
     link(rel='stylesheet', href='/stylesheets/sign-up.css')
     link(rel='stylesheet', href='/stylesheets/login.css')
+    link(rel='stylesheet', href='/stylesheets/create-message.css')
+    link(rel='stylesheet', href='/stylesheets/post-message.css')
   body
   nav
     div.nav-content
@@ -20,7 +22,7 @@ html
               a(href="/login") Log in
           else
             li
-              a(href="/post-message") Post message
+              a(href="/message-form") Post message
             li.login-logout
               a(href="/logout") Log out
   block content

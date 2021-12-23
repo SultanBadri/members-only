@@ -9,7 +9,10 @@ const {
   handleSignUp,
   handleLogin,
 } = require("./../controllers/authController");
-const { postMessage } = require("./../controllers/messageController");
+const {
+  getMessage,
+  postMessage,
+} = require("./../controllers/messageController");
 
 // GET home page
 router.get("/", getIndexView);
@@ -26,10 +29,8 @@ router
 // Handle logout
 router.get("/logout", handleLogout);
 
-// GET become member page
-
-// GET post message page
-router.get("/post-message", postMessage);
+// GET and POST message page
+router.get("/message-form", getMessage).get("/message-form", postMessage);
 
 // GET become admin page
 

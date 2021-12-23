@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-.sign-up-button {
+.submit-button {
   background-color: #00b7ff;
   margin: 10px 0;
   padding: 6px 14px;
@@ -19,6 +19,6 @@
   transition: all 0.3s;
 }
 
-.sign-up-button:hover {
+.submit-button:hover {
   background-color: #0299d4;
 }
