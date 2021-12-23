@@ -2,12 +2,12 @@ extends layout
 
 block content
   title= "Members Only"
-  if (!user)
-    h1= "You are not logged in!"
-  else
-    h1= "You are logged in!"
-
   div.content-wrapper
+    if (!user)
+      h1= "You are not logged in!"
+    else
+      h1= "You are logged in!"
+
     for message in messages
       div.message
         h2 #{message.title}

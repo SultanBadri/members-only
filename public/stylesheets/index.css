@@ -1,9 +1,13 @@
 .content-wrapper {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
 }
 
 .message {
-  width: 60%;
+  width: 70%;
   background-color: #333;
   border: 8px;
   padding: 2rem;

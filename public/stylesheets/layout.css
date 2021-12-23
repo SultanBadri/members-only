@@ -18,6 +18,7 @@ nav {
 
 .header {
   font-size: 1.6rem;
+  font-weight: bold;
   text-decoration: none;
   color: var(--blue);
   transition: all 0.2s;
