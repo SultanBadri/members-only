@@ -13,7 +13,8 @@ const {
   getMessage,
   postMessage,
 } = require("./../controllers/messageController");
-const { getAdmin } = require("./../controllers/adminController");
+const { getAdminForm } = require("./../controllers/adminController");
+
 // GET home page
 router.get("/", getIndexView);
 
@@ -33,6 +34,6 @@ router.get("/logout", handleLogout);
 router.get("/message-form", getMessage).post("/message-form", postMessage);
 
 // GET become admin page
-router.get("/admin-form", getAdmin);
+router.get("/admin-form", getAdminForm);
 
 module.exports = router;

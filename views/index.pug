@@ -10,6 +10,8 @@ block content
 
     for message in messages
       div.message
+        if (message.author.isAdmin)
+          p= "Hi admin"
         h2 #{message.title}
         p #{message.content}
         p Posted by user: #{message.author.username}

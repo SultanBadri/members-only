@@ -5,6 +5,11 @@ block content
   div.center-content
     h1= "Become Admin"
     form(action="" method="POST")
-    label(for="admin") Admin Code
-    input(name="admin" placeholder="Admin code" text="text" required)
-    button.submit-button "Submit"
+      label(for="admin") Admin Code
+      br
+      input(name="admin" placeholder="Admin code" text="text" required)
+      br
+      button.submit-button Submit
+    
+    if error
+      p= error
