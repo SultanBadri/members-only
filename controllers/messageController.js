@@ -8,7 +8,7 @@ exports.postMessage = (req, res, next) => {
     title: title,
     content: content,
     date: Date.now(),
-    author: req.user,
+    author: req.user._id,
   }).save((err) => {
     if (err) {
       return next(err);

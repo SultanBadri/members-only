@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  title= "Become Admin | Members Only"
+  div.center-content
+    h1= "Become Admin"
+    form(action="" method="POST")
+    label(for="admin") Admin Code
+    input(name="admin" placeholder="Admin code" text="text" required)
+    button.submit-button "Submit"
