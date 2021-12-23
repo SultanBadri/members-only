@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 
 exports.getSignUpForm = (req, res) => res.render("sign-up");
 
-exports.handleSignUp = async (req, res, next) => {
+exports.postSignUp = async (req, res, next) => {
   const { username, password } = req.body;
   bcrypt.hash(password, 10, (err, hashedPassword) => {
     const user = new User({

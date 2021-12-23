@@ -6,20 +6,23 @@ const {
   getLoginForm,
   getLoginFailForm,
   handleLogout,
-  handleSignUp,
+  postSignUp,
   handleLogin,
 } = require("./../controllers/authController");
 const {
   getMessage,
   postMessage,
 } = require("./../controllers/messageController");
-const { getAdminForm } = require("./../controllers/adminController");
+const {
+  getAdminForm,
+  postAdminForm,
+} = require("./../controllers/adminController");
 
 // GET home page
 router.get("/", getIndexView);
 
 // GET and POST sign up form
-router.get("/sign-up", getSignUpForm).post("/sign-up", handleSignUp);
+router.get("/sign-up", getSignUpForm).post("/sign-up", postSignUp);
 
 // GET and POST login form
 router
@@ -34,6 +37,6 @@ router.get("/logout", handleLogout);
 router.get("/message-form", getMessage).post("/message-form", postMessage);
 
 // GET become admin page
-router.get("/admin-form", getAdminForm);
+router.get("/admin-form", getAdminForm).post("/admin-form", postAdminForm);
 
 module.exports = router;

@@ -4,13 +4,13 @@ block content
   title= "Members Only"
   div.content-wrapper
     if (!user)
-      h1= "You are not logged in!"
+      h1= "You are not logged in!" 
     else
       h1= "You are logged in!"
 
     for message in messages
       div.message
-        if (message.author.isAdmin)
+        if message.author.isAdmin
           p= "Hi admin"
         h2 #{message.title}
         p #{message.content}

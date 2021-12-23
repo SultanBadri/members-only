@@ -1,14 +1,15 @@
 require("dotenv").config();
+const User = require("../models/userModel");
 
 exports.getAdminForm = (req, res) => res.render("admin-form");
 
-exports.handleAdminForm = async (req, res, next) => {
-  const { code } = req.body;
-  if (code !== process.env.ADMIN_CODE) {
+exports.postAdminForm = async (req, res, next) => {
+  const { passcode } = req.body;
+  if (passcode !== process.env.ADMIN_CODE) {
     res.render("admin-form", { error: "Invalid code!" });
   } else {
     try {
-      const updated = await User.findByIdAndUpdate(req.user.id, {
+      await User.findByIdAndUpdate(req.user.id, {
         isAdmin: true,
       });
       res.redirect("/");
