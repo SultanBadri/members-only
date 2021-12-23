@@ -9,7 +9,6 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const User = require("./models/userModel");
-const Message = require("./models/messageModel");
 
 const indexRouter = require("./routes/index");
 
