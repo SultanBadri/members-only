@@ -11,7 +11,9 @@ block content
           h1 Welcome, #{user.username}
           i.fas.fa-crown
       else
-        h1 Hi, #{user.username}
+        div.user
+          h1 Greetings, #{user.username}
+          i.fas.fa-user
 
     for message in messages
       div.message
@@ -24,17 +26,18 @@ block content
         div.message-content
           h2 #{message.title}
           p.content #{message.content}
-          div.admin-post.poster
-            if (message.author.isAdmin)
-              i.fas.fa-crown
-            else
-              i.far.fa-user
-            p #{message.author.username} 
-          div.date
-            i.far.fa-clock
-            p #{message.date.toLocaleString()}
-          if (user && user.isAdmin)
-            form(action="" method="POST")
-              input(name="messageId" value=message.id type="hidden" required)
-              button.submit-button 
-                i.fas.fa-trash-alt
+          div.post-info
+            div.admin-post.poster
+              p #{message.author.username} 
+              if (message.author.isAdmin)
+                i.fas.fa-crown
+              else
+                i.far.fa-user
+            div.date
+              p #{message.date.toLocaleString()}
+                i.far.fa-clock
+            if (user && user.isAdmin)
+              form(action="" method="POST")
+                input(name="messageId" value=message.id type="hidden" required)
+                button.submit-button 
+                  i.fas.fa-trash-alt
