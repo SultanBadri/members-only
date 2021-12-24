@@ -9,6 +9,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const favicon = require("serve-favicon");
+const helmet = require("helmet");
 const User = require("./models/userModel");
 
 const indexRouter = require("./routes/index");
@@ -44,6 +45,11 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
