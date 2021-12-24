@@ -1,5 +1,5 @@
 # members-only
-Members only page made with Node.js, Express, and MongoDB.
+Members-only page made with Node.js, Express, MongoDB, and Passport.js.
 
 ## Getting started
 
