@@ -16,15 +16,20 @@ html
           if (!locals.currentUser)
             li
               a(href="/sign-up") Sign up
-            li.login-logout
-              a(href="/login") Log in
+                i.fas.fa-user-plus
+            li.login-btn
+              a(href="/login") Log in 
+                i.fas.fa-sign-in-alt
           else
             li
               a(href="/message-form") Post message
+                i.fas.fa-pen
             li 
               a(href="/admin-form") Become Admin
-            li.login-logout
+                i.fas.fa-users-cog
+            li.logout-btn
               a(href="/logout") Log out
+                i.fas.fa-sign-in-alt
     script(src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true")
   block content
     

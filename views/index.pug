@@ -7,7 +7,9 @@ block content
       h1= "Log in to post!" 
     else
       if (user && user.isAdmin)
-        h1 Hi, #{user.username} 👑
+        div.admin-crown
+          h1 Welcome, #{user.username}
+          i.fas.fa-crown
       else
         h1 Hi, #{user.username}
 
@@ -15,7 +17,9 @@ block content
       div.message
         h2 #{message.title}
         p #{message.content}
-        p Posted by user: #{message.author.username}
+        div.admin-post.poster 
+          p #{message.author.username} 
+          i.fas.fa-crown
         p #{message.date.toLocaleString()}
         if (user && user.isAdmin)
           form(action="" method="POST")

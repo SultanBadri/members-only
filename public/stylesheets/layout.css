@@ -55,12 +55,25 @@ li a:hover {
   background-color: var(--darker-white);
 }
 
-.login-logout a {
+.login-btn a,
+.logout-btn a {
+  text-decoration: none;
   background-color: var(--red);
   color: white;
   transition: all 0.3s;
 }
 
-.login-logout a:hover {
+.login-btn a:hover,
+.logout-btn a:hover {
   background-color: var(--darker-red);
+}
+
+.logout-btn .fa-sign-in-alt {
+  margin-left: 0.3rem;
+}
+
+.fa-pen,
+.fa-users-cog,
+.fa-user-plus {
+  margin-left: 0.3rem;
 }
