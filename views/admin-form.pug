@@ -2,14 +2,15 @@ extends layout
 
 block content
   title= "Become Admin | Members Only"
-  div.center-content
-    h1= "Become Admin"
-    form(action="" method="POST")
-      label(for="passcode") Admin Code
-      br
-      input(name="passcode" placeholder="Admin code" type="password" required)
-      br
-      button.submit-button Submit
-    
-    if error
-      p= error
+  div.wrapper
+    div.center-content
+      h1= "Become Admin"
+      form(action="" method="POST")
+        label(for="passcode") Admin Code
+        br
+        input(name="passcode" placeholder="Admin code" type="password" required)
+        br
+        button.submit-button Submit
+      
+      if error
+        p= error

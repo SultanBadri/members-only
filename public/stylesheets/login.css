@@ -1,0 +1,10 @@
+/* login-fail */
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message p {
+  padding-left: 0.5rem;
+}

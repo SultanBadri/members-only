@@ -14,7 +14,7 @@
 
 .center-content h1 {
   color: var(--red);
-  padding-top: 0.5rem;
+  padding: 0.8rem 0;
   font-size: 2.4rem;
 }
 
@@ -35,6 +35,7 @@
 }
 
 form label {
+  font-weight: bolder;
 }
 
 input,
@@ -44,12 +45,13 @@ textarea {
   outline: none;
   padding: 8px 5px;
   border-radius: 4px;
-  margin: 0.3rem 4rem 1rem 0;
+  margin: 0.5rem 4rem 1rem 0;
   transition: all 0.3s;
   width: 100%;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border: 2px solid var(--red);
   box-shadow: 0 0 0 0.2rem #e5383b57;
 }
