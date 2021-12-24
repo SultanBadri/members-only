@@ -3,7 +3,7 @@
   --darker-red: #ce171a;
   --white: #f5f5f5;
   --darker-white: #d4d4d4;
-  --blue: #30475e;
+  --blue: #4f83b6;
   --black: #121212;
 }
 
@@ -30,6 +30,10 @@ nav {
 
 .header:hover {
   color: var(--darker-red);
+}
+
+.fa-user-lock {
+  margin-left: 0.5rem;
 }
 
 ul {

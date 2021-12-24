@@ -39,13 +39,21 @@
 
 .admin-post .fa-crown {
   color: gold;
-  font-size: 1.2rem;
-  padding-left: 0.5rem;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
 }
 
-.poster {
+/* .poster {
   border: 1px solid var(--red);
   width: 10%;
   border-radius: 25px;
-  padding-left: 0.7rem;
+  padding-left: 0.8rem;
+} */
+
+.date {
+  display: flex;
+}
+
+.date .fa-clock {
+  margin-right: 0.3rem;
 }

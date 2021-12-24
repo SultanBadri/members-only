@@ -17,10 +17,12 @@ block content
       div.message
         h2 #{message.title}
         p #{message.content}
-        div.admin-post.poster 
-          p #{message.author.username} 
+        div.admin-post.poster
           i.fas.fa-crown
-        p #{message.date.toLocaleString()}
+          p #{message.author.username} 
+        div.date
+          i.far.fa-clock
+          p #{message.date.toLocaleString()}
         if (user && user.isAdmin)
           form(action="" method="POST")
             input(name="messageId" value=message.id type="hidden" required)
