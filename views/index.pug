@@ -15,15 +15,26 @@ block content
 
     for message in messages
       div.message
-        h2 #{message.title}
-        p #{message.content}
-        div.admin-post.poster
-          i.fas.fa-crown
-          p #{message.author.username} 
-        div.date
-          i.far.fa-clock
-          p #{message.date.toLocaleString()}
-        if (user && user.isAdmin)
-          form(action="" method="POST")
-            input(name="messageId" value=message.id type="hidden" required)
-            button.submit-button Delete
+        if (message.author.isAdmin)
+          div.icon-image
+            i.fas.fa-crown
+        else
+          div.icon-image
+            i.fas.fa-user
+        div.message-content
+          h2 #{message.title}
+          p.content #{message.content}
+          div.admin-post.poster
+            if (message.author.isAdmin)
+              i.fas.fa-crown
+            else
+              i.far.fa-user
+            p #{message.author.username} 
+          div.date
+            i.far.fa-clock
+            p #{message.date.toLocaleString()}
+          if (user && user.isAdmin)
+            form(action="" method="POST")
+              input(name="messageId" value=message.id type="hidden" required)
+              button.submit-button 
+                i.fas.fa-trash-alt

@@ -6,5 +6,9 @@
 }
 
 .error-message p {
-  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.error-message .fa-exclamation-triangle {
+  margin-right: 0.5rem;
 }
