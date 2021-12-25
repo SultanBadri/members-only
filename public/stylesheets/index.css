@@ -117,3 +117,20 @@
 .message-content form {
   margin-top: 0.6rem;
 }
+
+@media screen and (max-width: 950px) {
+  .message {
+    width: 80%;
+  }
+
+  .poster,
+  .date {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .message {
+    width: 90%;
+  }
+}

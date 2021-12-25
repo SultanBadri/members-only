@@ -81,3 +81,24 @@ li a:hover {
 .fa-user-plus {
   margin-left: 0.3rem;
 }
+
+@media screen and (max-width: 950px) {
+  .nav-content {
+    padding: 0 1rem;
+  }
+
+  /* .header {
+    font-size: 1.4rem;
+  } */
+
+  li {
+    padding: 0 0.5rem;
+  }
+
+  li a {
+    padding: 5px 9px;
+  }
+}
+
+@media screen and (max-width: 756px) {
+}
