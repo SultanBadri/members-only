@@ -87,7 +87,7 @@ li a:hover {
   cursor: pointer;
   position: absolute;
   top: 1.2%;
-  left: 93%;
+  left: calc(100% - 4rem);
   font-size: 25px;
   display: none;
   transition: 0.2s;
@@ -119,7 +119,7 @@ li a:hover {
   }
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 768px) {
   ul {
     flex-direction: column;
     justify-content: center;

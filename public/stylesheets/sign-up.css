@@ -3,6 +3,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   margin-top: 5rem;
+  width: 60%;
 }
 
 .center-content {
@@ -71,4 +72,10 @@ textarea:focus {
 
 .submit-button:hover {
   background-color: var(--darker-red);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 85%;
+  }
 }
