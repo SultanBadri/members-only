@@ -131,6 +131,43 @@
 
 @media screen and (max-width: 756px) {
   .message {
-    width: 90%;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .icon-image {
+    width: 25%;
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+
+  .message {
+    padding: 1.5rem;
+  }
+
+  .message .content {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .poster,
+  .date {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content-wrapper h1 {
+    font-size: 1.5rem;
+  }
+
+  .message-content p {
+    font-size: 0.8rem;
+  }
+
+  .admin-crown .fa-crown,
+  .user .fa-user {
+    font-size: 1.5rem;
   }
 }
