@@ -82,14 +82,33 @@ li a:hover {
   margin-left: 0.3rem;
 }
 
+.menu {
+  color: #818181;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2%;
+  left: 93%;
+  font-size: 25px;
+  display: none;
+  transition: 0.2s;
+}
+
+.menu:hover {
+  color: white;
+}
+
+.side-nav a {
+  white-space: nowrap;
+}
+
+.side-nav .close-btn {
+  display: none;
+}
+
 @media screen and (max-width: 950px) {
   .nav-content {
     padding: 0 1rem;
   }
-
-  /* .header {
-    font-size: 1.4rem;
-  } */
 
   li {
     padding: 0 0.5rem;
@@ -101,4 +120,49 @@ li a:hover {
 }
 
 @media screen and (max-width: 756px) {
+  ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--black);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+  }
+
+  .side-nav .close-btn {
+    font-size: 25px;
+    display: block;
+    position: absolute;
+    color: #818181;
+    text-decoration: none;
+    top: 12px;
+    right: 29px;
+    font-size: 36px;
+  }
+
+  .side-nav .close-btn span {
+    transition: 0.2s;
+  }
+
+  .side-nav .close-btn span:hover {
+    color: var(--white);
+  }
 }
