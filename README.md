@@ -1,7 +1,7 @@
 # members-only
 Members-only page made with Node.js, Express, MongoDB, and Passport.js.
 
-![members-only](https://user-images.githubusercontent.com/46205282/147396683-49eda24d-40b3-4b72-a287-2c7c5065d501.gif)
+![members-only](https://user-images.githubusercontent.com/46205282/147396832-07e45cb6-e294-4ae4-b75c-28184b768b15.gif)
 
 ## Getting started
 
