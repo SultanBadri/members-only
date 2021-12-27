@@ -29,7 +29,7 @@ app.set("view engine", "pug");
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: {process.env.SESSION_SECRET || "ThereRAdminsBehindTheseDoors:)" },
     resave: false,
     saveUninitialized: true,
   })
