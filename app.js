@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 const session = require("express-session");
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
@@ -51,7 +51,7 @@ app.use(
   })
 );
 app.use(express.static(path.join(__dirname, "public")));
-app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+// app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 app.use("/", indexRouter);
 
