@@ -4,8 +4,9 @@ exports.getIndexView = async (req, res, next) => {
   try {
     const messages = await Message.find()
       .sort([["date", "descending"]])
-      .populate("author");
-    res.render("index", { user: req.user, messages });
+      .populate("author")
+      .exec();
+    res.render("index", { user: req.user, messages: messages });
   } catch (err) {
     return next(err);
   }

@@ -8,28 +8,23 @@ exports.postSignUp = async (req, res, next) => {
   const { username, password, confirm } = req.body;
   if (confirm !== password) {
     res.render("sign-up", {
-      username,
+      username: username,
       error: "Passwords must match!",
     });
-  }
-  try {
-    const userExists = await User.findOne({ username });
-
-    if (userExists) {
-      res.render("sign-up", { error: "Username already taken." });
-    }
-
-    bcrypt.hash(password, 10, async (err, hashedPassword) => {
-      const user = await new User({
-        username,
+  } else {
+    bcrypt.hash(password, 10, (err, hashedPassword) => {
+      const user = new User({
+        username: username,
         password: hashedPassword,
         isMember: true,
         isAdmin: false,
+      }).save((err) => {
+        if (err) {
+          return next(err);
+        }
+        res.redirect("/login");
       });
     });
-    res.redirect("/login");
-  } catch (err) {
-    return next(err);
   }
 };
 
