@@ -8,7 +8,7 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
-// const favicon = require("serve-favicon");
+const favicon = require("serve-favicon");
 const helmet = require("helmet");
 const User = require("./models/userModel");
 
@@ -51,7 +51,7 @@ app.use(
   })
 );
 app.use(express.static(path.join(__dirname, "public")));
-// app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 app.use("/", indexRouter);
 
