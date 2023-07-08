@@ -7,12 +7,18 @@ Members-only page made with Node.js, Express, MongoDB, and Passport.js.
 
 ## Getting started
 
-After cloning the repo, run:
+Clone the repo
 
-```elm
+```
+git clone https://github.com/SultanBadri/members-only.git
+```
+
+Next, run:
+
+```
 cd members-only
 npm install
 npm run devstart
 ```
 
-The site is now running at `localhost:3000`.
+The server is now running at `localhost:3000`.
